@@ -375,3 +375,250 @@ a {
   font-style: normal;
   margin-top: 1.6rem;
 }
+/* FEATURED SLIDER — pure CSS, auto-advancing, no JS */
+.slider {
+  position: relative;
+  height: 420px;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 30px 60px -30px rgba(27, 75, 67, 0.4);
+}
+.slide {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  opacity: 0;
+  animation: slideCycle 20s infinite;
+}
+.slide:nth-child(1) {
+  animation-delay: 0s;
+}
+.slide:nth-child(2) {
+  animation-delay: 4s;
+}
+.slide:nth-child(3) {
+  animation-delay: 8s;
+}
+.slide:nth-child(4) {
+  animation-delay: 12s;
+}
+.slide:nth-child(5) {
+  animation-delay: 16s;
+}
+
+@keyframes slideCycle {
+  0% {
+    opacity: 0;
+  }
+  2% {
+    opacity: 1;
+  }
+  18% {
+    opacity: 1;
+  }
+  22% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.slide-visual {
+  flex: 0 0 45%;
+  position: relative;
+}
+.slide-info {
+  flex: 1;
+  background: #fff;
+  padding: 2.4rem 2.2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.slide-info .tag {
+  align-self: flex-start;
+  font-size: 0.75rem;
+  font-weight: 700;
+  background: var(--cream-2);
+  color: var(--jade-dark);
+  padding: 0.3rem 0.8rem;
+  border-radius: 20px;
+  margin-bottom: 0.9rem;
+}
+.slide-info h3 {
+  font-size: 1.6rem;
+  color: var(--jade-dark);
+  margin-bottom: 0.5rem;
+}
+.slide-info .maker {
+  color: #7a7364;
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+}
+.slide-info .price {
+  font-weight: 800;
+  color: var(--brick);
+  font-size: 1.3rem;
+}
+
+.pattern-a {
+  background: url("image/estalif.jpg") no-repeat center center/cover;
+}
+.pattern-b {
+  background: url("image/carpet.jpg") no-repeat center center/cover;
+}
+.pattern-c {
+  background: url("image/khamak.jpg") no-repeat center center/cover;
+}
+.pattern-d {
+  background: url("image/wood-carving.jpg") no-repeat center center/cover;
+}
+.pattern-e {
+  background: url("image/lapis-lazuli.jpg") no-repeat center center/cover;
+}
+.slider-dots {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: center;
+  margin-top: 1.1rem;
+}
+.slider-dots span {
+  width: 34px;
+  height: 4px;
+  background: var(--cream-2);
+  border-radius: 2px;
+  overflow: hidden;
+  position: relative;
+}
+.slider-dots span i {
+  position: absolute;
+  inset: 0;
+  background: var(--brick);
+  transform: scaleX(0);
+  transform-origin: right;
+  animation: dotFill 20s infinite;
+}
+.slider-dots span:nth-child(1) i {
+  animation-delay: 0s;
+}
+.slider-dots span:nth-child(2) i {
+  animation-delay: 4s;
+}
+.slider-dots span:nth-child(3) i {
+  animation-delay: 8s;
+}
+.slider-dots span:nth-child(4) i {
+  animation-delay: 12s;
+}
+.slider-dots span:nth-child(5) i {
+  animation-delay: 16s;
+}
+@keyframes dotFill {
+  0% {
+    transform: scaleX(0);
+  }
+  2% {
+    transform: scaleX(1);
+  }
+  20% {
+    transform: scaleX(1);
+  }
+  22% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(0);
+  }
+}
+
+/* GALLERY CARDS */
+.craft-card {
+  background: #fff;
+  border-radius: 6px;
+  overflow: hidden;
+  height: 100%;
+  border: 1px solid rgba(46, 42, 36, 0.07);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+.craft-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 26px 40px -24px rgba(27, 75, 67, 0.35);
+}
+.craft-thumb {
+  height: 190px;
+  position: relative;
+}
+.craft-thumb .ribbon {
+  position: absolute;
+  top: 12px;
+  right: 0;
+  background: var(--jade);
+  color: #fff;
+  font-size: 0.72rem;
+  font-weight: 700;
+  padding: 0.35rem 0.8rem 0.35rem 1rem;
+  border-radius: 20px 0 0 20px;
+}
+.craft-seal {
+  position: absolute;
+  bottom: -18px;
+  left: 16px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: var(--gold);
+  color: var(--jade-dark);
+  font-size: 0.68rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+  border: 3px solid #fff;
+  box-shadow: 0 6px 14px -6px rgba(0, 0, 0, 0.3);
+}
+.craft-body {
+  padding: 1.6rem 1.3rem 1.2rem;
+}
+.craft-body h4 {
+  font-size: 1.05rem;
+  margin-bottom: 0.2rem;
+  color: var(--jade-dark);
+  font-weight: 700;
+}
+.craft-body .maker-line {
+  font-size: 0.85rem;
+  color: #847d6d;
+  margin-bottom: 0.8rem;
+}
+.craft-body .price-line {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.craft-body .price {
+  font-weight: 800;
+  color: var(--brick);
+}
+
+.thumb-pottery {
+  background: url("image/pottery.jpg") no-repeat center center/cover;
+}
+.thumb-kilim {
+  background: url("image/kalim.jpg") no-repeat center center/cover;
+}
+.thumb-copper {
+  background: url("image/copper.jpg") no-repeat center center/cover;
+}
+.thumb-mina {
+  background: url("image/mina.jpg") no-repeat center center/cover;
+}
+.thumb-khatam {
+  background: url("image/khatam.jpg") no-repeat center center/cover;
+}
+.thumb-tile {
+  background: url("image/tile.jpg") no-repeat center center/cover;
+}
