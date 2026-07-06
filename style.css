@@ -622,3 +622,49 @@ a {
 .thumb-tile {
   background: url("image/tile.jpg") no-repeat center center/cover;
 }
+
+/* CONTACT / تماس */
+.contact-section {
+  background: var(--jade);
+  color: #fff;
+}
+.contact-card {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  border-radius: 6px;
+  padding: 1.6rem;
+  height: 100%;
+}
+.contact-card i {
+  font-size: 1.4rem;
+  color: var(--gold);
+  margin-left: 0.6rem;
+}
+.form-control-craft {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: #fff;
+  border-radius: 3px;
+}
+.form-control-craft::placeholder {
+  color: rgba(255, 255, 255, 0.55);
+}
+.form-control-craft:focus {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--gold);
+  box-shadow: none;
+  color: #fff;
+}
+.social-row a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  color: #fff;
+  margin-left: 0.6rem;
+  font-size: 1.05rem;
+  transition: background 0.25s ease;
+}
