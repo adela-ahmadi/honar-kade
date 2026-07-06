@@ -668,3 +668,12 @@ a {
   font-size: 1.05rem;
   transition: background 0.25s ease;
 }
+footer {
+  background: var(--jade-dark);
+  color: rgba(255, 255, 255, 0.65);
+  padding: 1.6rem 0;
+  font-size: 0.88rem;
+}
+footer a {
+  color: rgba(255, 255, 255, 0.85);
+}
