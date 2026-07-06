@@ -321,3 +321,57 @@ a {
   color: var(--jade);
   border-color: #fff;
 }
+/* ABOUT */
+.section {
+  padding: 5.5rem 0;
+}
+.section-tight {
+  padding: 4.5rem 0;
+}
+.about-visual {
+  position: relative;
+  border-radius: 6px;
+  overflow: hidden;
+  min-height: 340px;
+
+  background: url("image/about-pic.jpg") no-repeat center center;
+  background-size: cover;
+}
+
+.about-visual::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(
+      circle at 30% 30%,
+      rgba(212, 175, 106, 0.35),
+      transparent 55%
+    ),
+    radial-gradient(circle at 75% 70%, rgba(178, 58, 46, 0.3), transparent 50%);
+}
+.stat-badge {
+  background: #fff;
+  border: 1px solid rgba(46, 42, 36, 0.08);
+  border-radius: 6px;
+  padding: 1.1rem 1.3rem;
+  text-align: center;
+  box-shadow: 0 10px 24px -14px rgba(27, 75, 67, 0.25);
+}
+.stat-badge .num {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  color: var(--brick);
+  display: block;
+}
+.stat-badge .lbl {
+  font-size: 0.85rem;
+  color: #5b5548;
+}
+.pull-quote {
+  border-right: 4px solid var(--copper);
+  padding-right: 1.2rem;
+  font-size: 1.1rem;
+  color: var(--jade-dark);
+  font-style: normal;
+  margin-top: 1.6rem;
+}
